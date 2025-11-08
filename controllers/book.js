@@ -3,12 +3,12 @@ const { newProduct } = require("../models/new_product");
 const axios = require("axios");
 require('dotenv').config();
 
-const INSTA_API = "neyl1q7qp2hagwbc2mex";
+const INSTA_API = "API_KEY";
 
 async function controllerBookOrder(req, res) {
   try {
     const body = req.body;
-    const InstaUrl = "https://one-be.instaworld.pk/logistics/v1/createShipment";
+    const InstaUrl = "YOUR_API_URL_ENDPOINT";
     
     // ✅ Validate required fields
     if (
@@ -182,5 +182,6 @@ async function controllerBookOrder(req, res) {
     });
   }
 }
+
 
 module.exports = { controllerBookOrder };
