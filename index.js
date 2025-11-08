@@ -11,10 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false })); 
 app.use(cors());
 
-mongoConnect("mongodb://admin:password123@192.168.100.10:27017/?authSource=admin")
+mongoConnect("Your_Url_Here")
 .then(() => console.log("mongodb connected!"))
 .catch(() => console.log("failed to connect with mongodb"));
 app.use('/order', router);
 app.use('/product', router_products);
 
 app.listen(port, () => console.log(`server started at port ${port}`));
+
